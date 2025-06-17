@@ -16,3 +16,114 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+  gap: 24px;
+  padding: 40px 20px;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.gallery-item {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-link:hover .gallery-image {
+  transform: scale(1.03);
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 12px;
+  font-size: 10px;
+  color: #333;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+
+.gallery-info p {
+  margin: 0;
+  font-weight: 500;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+#search-form input[name="query"] {
+  width: 280px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  color: #333;
+}
+
+#search-form input[name="query"]:hover {
+  border-color: #888;
+}
+
+#search-form input[name="query"]:focus {
+  border-color: #4e75ff;
+  box-shadow: 0 0 0 2px rgba(78, 117, 255, 0.2);
+}
+
+#search-form button,
+.load-more-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+.load-more-btn {
+  display: block;
+  margin: 20px auto;
+}
+#search-form button:hover,
+.load-more-btn:hover {
+  background-color: #6c8cff;
+}
+
+#search-form button:disabled {
+  background-color: #b0c4ff;
+  cursor: not-allowed;
+}

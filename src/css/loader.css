@@ -1,0 +1,25 @@
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
